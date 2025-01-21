@@ -117,7 +117,11 @@ public class BlackJack {
     }
 
     private static int cardValue(int card) {
-        return card < 9 ? card + 2 : 10;
+        if(card < 9)
+            return card + 2;
+        
+        return 10;
+        //return card < 9 ? card + 2 : 10;
     }
 
     int linearSearch(int[] numbers, int key) {
